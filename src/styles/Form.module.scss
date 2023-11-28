@@ -1,0 +1,490 @@
+.formBody {
+    background-color: #F4F6FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+}
+
+.formContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.08);
+    padding-bottom: 2em;
+}
+
+.progressBarContainer {
+    margin: 4em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.progressBarOne {
+    position: relative;
+    border: 2px solid #3900B1;
+    background-color: #3900B1;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.progressBarOne::before {
+    position: absolute;
+    content: "1";
+    color: white;
+    font-weight: 600;
+}
+
+.break {
+    height: 3px;
+    background-color: #D7D6FF;
+    width: 9em;
+}
+
+.progressBarTwo {
+    position: relative;
+    border: 2px solid #3900B1;
+    background-color: #EDEFFF;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.progressBarTwo::before {
+    position: absolute;
+    content: "2";
+    color: #3900B1;
+    font-weight: 600;
+}
+
+.stepInProgress.progressBarTwo::before {
+    color: white;
+}
+
+.stepInProgress.progressBarTwo {
+    background-color: #3900B1;
+}
+
+
+.progressBarThree {
+    position: relative;
+    border: 2px solid #3900B1;
+    background-color: #EDEFFF;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.progressBarThree::before {
+    position: absolute;
+    content: "3";
+    color: #3900B1;
+    font-weight: 500;
+}
+
+.stepInProgress.progressBarThree::before {
+    color: white;
+}
+
+.stepInProgress.progressBarThree {
+    background-color: #3900B1;
+}
+
+
+.stepComplete {
+    position: relative;
+    border: 2px solid #3900B1;
+    background-color: #3900B1;
+}
+
+.stepComplete::before {
+    content: "";
+    background: url(/images/checkmark.svg) 
+      no-repeat center;
+    width: 45%;
+    height: 100%;
+    background-size: contain;
+    transition: all 0.5s ease;
+}
+
+.breakComplete {
+    height: 3px;
+    background-color: #3900B1;
+    width: 9em;
+    transition: all 1s ease;
+}
+
+.stepOneContainer, .stepTwoContainer {
+    min-width: 600px;
+}
+
+.spanContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.span {
+    flex: 1;
+    display: inline-block;
+}
+
+.span:nth-of-type(1) {
+    margin-right: 2em;
+  }
+
+.input {
+    background-color: white;
+    width: 100%;
+    min-width: 200px;
+    min-height: 50px;
+    border: 1px solid #d3d3d3;
+    box-shadow: inset 0px 1px 18px -4px rgba(0, 0, 0, 0.031);
+    border-radius: 2px;
+}
+
+.input::placeholder {
+    font-size: 0.9em;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: #ACACAC;
+}
+
+.input[type="text"]:focus {
+    outline: 2px solid #0500D6;
+    box-shadow: none;
+    background-color: #FAFAFF;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.06em; 
+}
+
+.input[type="text"], .textArea, .jobDescription {
+    padding-left: 10px;
+  }
+  
+.input[type="file"], .textArea {
+    width: 100%;
+    border: 1px solid #C7C7C7;
+  }
+
+.ql-container {
+    height: auto;
+
+  }
+  
+.ql-editor {
+    height: 100% !important;
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+  }
+
+
+
+.quillEditor {
+    height: 500px;
+    margin-bottom: 4em;
+    max-width: 650px;
+}
+
+.textArea, .jobDescription {
+    background-color: white;
+    padding-top: 10px;
+    min-height: 100px;
+    box-shadow: inset 0px 1px 18px -4px rgb(0, 0, 0, 0.031);
+    border-radius: 2px;
+    margin-bottom: 1.5em;
+}
+
+.textArea::placeholder, .jobDescription::placeholder {
+    font-size: 0.9em;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: #ACACAC;
+}
+
+.textArea:focus, .jobDescription:focus {
+    outline: 2px solid #0500D6;
+    box-shadow: none;
+}
+
+.applyLinkCont {
+    margin-bottom: 3em;
+}
+
+.applyLinkError {
+    color: red;
+    display: none;
+}
+
+.input[type="file"] {
+    position: relative;
+    border: 1px dashed #0500D6;
+    min-height: 140px;
+    background-color: #F8F8FF;
+    margin-bottom: 3em;
+  }
+  
+  .input[type="file"]::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 140px;
+    content: '';
+    background: url(/images/upload2.svg) 
+    no-repeat center;
+    background-color: #F8F8FF;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+  } 
+
+  .fileSelected.input[type="file"], .fileSelected.input[type="file"]::before  {
+       background: none;
+  }
+
+  .fileSelected.input[type="file"] {
+    border: 3px solid #0500D6; 
+  }
+
+  .input[type="file"]::file-selector-button, 
+  .input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+    position: absolute;
+  }
+
+.input[type="text"]:valid, .textArea:valid, .jobDescription:valid {
+    position: relative;
+    outline: 1px solid #0500D6;
+    border: none;
+}
+
+
+.tagContainer {
+    display: flex;
+    margin-bottom: 1.2em;
+}
+
+.tagWrap {
+    display: flex;
+    align-items: center;
+}
+
+.tagWrap label {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+
+.tagWrap:nth-of-type(1) label {
+    color: #2760B6;
+}
+
+.tagWrap:nth-of-type(2) label {
+    color: #0D8119;
+}
+
+.tagWrap:nth-of-type(3) label {
+    color: #A01569;
+}
+
+.tagWrap input, .tagWrap input[type="text"]:focus {
+    border: none;
+    outline: none;
+    border-radius: none;
+}
+
+.tagWrap input[type="text"]:focus {
+    border-bottom: 1px solid #0500D6;
+}
+
+.tagWrap input[type="text"]:valid {
+    outline: none;
+}
+
+  .stepOneSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .stepTwoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 600px;
+  }
+
+  .stepThreeSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 720px;
+    min-height: 200px;
+  }
+
+  .stepThreeSection div {
+    text-align: center;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.nextStepBtn, .prevStepBtn {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    border-radius: 3px;
+    background-color: #18020C;
+    padding: 1em 1.5em;
+    margin-bottom: 3em;
+}
+
+.nextStepBtn::after {
+    content: " >";
+    font-size: 1.1em;
+}
+
+.nextStepBtn:hover {
+    transform: translateX(5px);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.prevStepBtn {
+    background-color: #3b38ef;
+}
+
+.prevStepBtn::before {
+    content: "< ";
+    font-size: 1.1em;
+}
+
+.prevStepBtn:hover {
+    transform: translateX(-5px);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+
+@media only screen and (max-width: 680px) {
+
+    .formContainer {
+        background-color: #F3F6FA;
+        box-shadow: none;
+        padding-top: 0;
+    }
+
+    .break, .breakComplete {
+        width: 4.5em;
+    }
+
+    .spanContainer {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .spanContainer .span {
+        width: 100%;
+        margin-bottom: 1.2em;
+    }
+
+    .textArea {
+        margin-bottom: 1em;
+    }
+
+    .stepOneContainer, .stepTwoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        min-width: 0;
+        
+    }
+    
+    .stepTwoSection {
+        min-width: 340px;
+    }
+
+    .tagContainer {
+        flex-direction: column;
+    }
+
+    .tagWrap {
+        margin-bottom: 10px;
+    }
+
+    .stepThreeSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 0;
+        min-width: 340px;
+      }
+
+    .input {
+        min-width: 0;
+        width: 100%;
+    }
+
+
+    .buttonsContainer {
+        margin-top: 2em;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        
+    }
+
+    .progressBarOne, .progressBarTwo, .progressBarThree {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ql-editor {
+        background-color: white !important;
+    }
+
+    .ql-container {
+        background-color: white !important;
+    }
+    
+   
+}
+
+
+

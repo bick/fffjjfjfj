@@ -1,0 +1,13 @@
+// Importing reset styles
+@import './reset.scss';
+@import './grid.scss';
+
+// Tailwind directives
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide the spinner of nprogress */
+#nprogress .spinner {
+        display: none !important;
+}
